@@ -10,13 +10,7 @@ resource "aws_instance" "web" {
   tags = {
     Name = "web_app"
   }
-
-  connection {
-    type        = "ssh"
-    agent       = "false"
-    user        = "ubuntu"
-    private_key = "${file("./new.pem")}"
-  }
+  
 }
 output "ip-address" {
   value = ["${aws_instance.web.*.public_ip}"]
