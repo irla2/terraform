@@ -28,10 +28,7 @@ resource "aws_subnet" "pravite" {
 resource "aws_internet_gateway" "igw" {
   vpc_id = "${aws_vpc.my-vpc.id}"
 
-  tags {
-    Name = "VPC IGW"
-  }
-}
+ }
 
 resource "aws_route_table" "public-RT" {
   vpc_id = "${aws_vpc.my-vpc.id}"
