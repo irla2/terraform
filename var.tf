@@ -1,6 +1,6 @@
 variable "accesskey"{
 type= "string"
 }
-variabke "secretkey" {
+variable "secretkey" {
 type= "string"
 }
